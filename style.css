@@ -26,7 +26,7 @@ nav{
     z-index: 1000; 
 }
 
-ul {
+header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -83,11 +83,9 @@ h4 {
 }
 
 /* =====================================================
-   MAIN SECTIES & ARTIKELEN
+   MAIN SECTIES & lists
 ===================================================== */
 main section {
-    display: flex;
-    flex-wrap: wrap;
     gap: 2em;
     padding: 1.5em;
     margin: 2em auto;
@@ -97,7 +95,7 @@ main section {
     align-items: flex-start;
 }
 
-main section img {
+main section li img {
     flex: 0 0 30%;
     max-width: 300px;
     border-radius: 10px;
@@ -105,19 +103,23 @@ main section img {
     transition: transform 0.5s;
 }
 
-main section img:hover {
+main section li img:hover {
     transform: rotate(10deg) scale(1.05);
     z-index: 2;
 }
 
 
-main section article {
+main section li {
     flex: 1;
     padding-right: 1em;
     min-width: 250px;
 }
 
-main section article a {
+main section ul {
+    display: flex;
+}
+
+main section li a {
     display: inline-block;
     padding: 0.5em 1em;
     background-color: #ef881a;
@@ -128,13 +130,13 @@ main section article a {
     transition: all 0.3s ease;
 }
 
-main section article a:hover {
+main section li a:hover {
     background-color: #45C4B0;
     color: #012030;
     transform: scale(1.05);
 }
 
-main article h2 {
+main li h2 {
     color:#45C4B0;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 1.5em;
@@ -147,30 +149,28 @@ main section h2 {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2em;
     text-shadow: 2px 2px 8px #012030;
-     margin-left: -10.4em;
-     margin-top: -1.3em;
 
 }
 
-main article h3 {
+main li h3 {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 1em;
     margin-bottom: 0.5em;
     color: antiquewhite;
 }
 
-main section article p {
-    display: block;
+main section li p {
+    display: inline-block;
     margin-bottom: 1em;
     max-width: 100%;
     margin-left: 0;
 }
-main article {
+main li {
     display: block;
     width: 100%;
 }
 
-main article p {
+main li p {
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 1em;
